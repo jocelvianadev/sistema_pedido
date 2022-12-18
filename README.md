@@ -1,3 +1,3 @@
 # sistema_pedido
 
-Este é um sistema de pedido desenvovido nas aulas do curso usando composição da linguagem java.
+Este é um sistema de pedido desenvolvido nas aulas do curso do prof. Nélio Alves usando composição da linguagem java.
