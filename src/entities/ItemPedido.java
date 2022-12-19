@@ -4,11 +4,23 @@ public class ItemPedido {
 	private Integer quantidade;
 	private Double preco;
 	
+	//Composição:
+	private Produto produto;
+	
 	public ItemPedido() {}
 
-	public ItemPedido(Integer quantidade, Double preco) {
+	public ItemPedido(Integer quantidade, Double preco, Produto produto) {
 		this.quantidade = quantidade;
 		this.preco = preco;
+		this.produto = produto;
+	}
+
+	public Produto getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
 	}
 
 	public Integer getQuantidade() {
@@ -27,7 +39,19 @@ public class ItemPedido {
 		this.preco = preco;
 	}
 	
+	public double subTotal() {
+		return preco * quantidade;
+	}
 	
-	
+	@Override
+	public String toString() {
+		return getProduto().getNome()
+			   + ", $"
+			   + String.format("%.2f", preco)
+			   + ", Quantidade: "
+			   + quantidade
+			   + ", Subtotal: $"
+			   + String.format("%.2f", subTotal());
+	}
 	
 }
